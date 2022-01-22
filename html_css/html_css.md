@@ -55,5 +55,15 @@
 ## Text Contents Element
 
 ### Heading
+- 제목 : h(heading)
+- h1 ~ h6
 
 ### Paragraph
+- p(paragraph) : 단락
+- hr(Horizontal Rules) : 수평선(단란을 구분하는 의미)
+- br(Line Break) : 강제 줄바꿈
+  ( ※ 강제 공백(Entity Code): &nbsp; - Non-breaking space )
+  ( ※ & : ampersand )
+  - HTML Text 줄바꿈, 공백 인식
+    - 공백 1칸으로 인식
+

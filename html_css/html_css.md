@@ -67,3 +67,23 @@
   - HTML Text 줄바꿈, 공백 인식
     - 공백 1칸으로 인식
 
+### HTML List
+- 순서없는 목록 : ul _ li
+- 순서있는 목록 : ol _ li
+- 설명 목록 : dl _ dt _ dd
+
+※ 포함관계 / 중첩관계( Nested Element )
+- 포함하는 요소 : 부모요소(Parent), 조상요소(ancestor)
+- 포함되는 요소 : 자식요소(Child), 자손요소(descendant)
+- 이웃하는 요소 : 형제요소(sibling)
+
+### HTML Link
+- 하이퍼링크 연결
+- a(anchor)
+  - href(hypertext reference) attribute : 연결되는 페이지의 주소 정보
+  - target attribute : 새탭 열기 설정
+    - target="_blank" : 새탭 열기
+- Bookmark 기능
+  - 목적지에 id attribute를 사용해서 이름 지정
+  - a 태그의 href 속성에 "#이름" 으로 위치 표시
+

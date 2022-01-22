@@ -2,7 +2,7 @@
 
 ## Client - Server Model
 
-https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8_%EC%84%9C%EB%B2%84_%EB%AA%A8%EB%8D%B8#/media/%ED%8C%8C%EC%9D%BC:Client-server-model.svg
+https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8_%EC%84%9C%EB%B2%84_%EB%AA%A8%EB%8D%B8
 
 https://darvishdarab.github.io/cs421_f20/docs/readings/restful/api/
 

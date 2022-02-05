@@ -162,3 +162,128 @@ domain : www.abc.com
 상대 방식(현재페이지 : index.html) : ../imges/photo.jpg
 root 상대방식 : /images/photo.jpg
 ```   
+
+## HTML Head
+- head element
+  - title : 웹사이트 제목(브라우저 탭에 표시)
+  - meta : 웹사이트 관련 정보
+  - link : css 파일 불러오기
+  - style : css 코드 작성
+  - script : js 코드 작성 / 파일 불러오기
+
+- mata
+  - charset(character set) : 문자 세트 - 글자(문자)를 표시하는 방식
+  - 종류/ 개수 => 용량
+    - bit : 0또는1이 저장되는 공간
+    - 1bit가 저장/표현 할수 있는 개수(가짓수) : 2
+    - 2 * 2 * 2 * 2 => 4bit => 16개
+    - 1byte = 8bit => 256개(0~255) (byte < KB < MB < TB < PB...)    
+  - UTF-8 : 글자(문자) 표기 방식 중 하나
+    - 2byte로 글자를 표시(65536개) : 유니코드
+    - 영문 1byte로 표현, 한글 2byte로 표시
+    - UTF(Universal Coded Character Set + Transformation Format – 8-bit)
+  - EUC-KR : 한글, 영문 전용 표시 방식
+
+## HTML Block & Inline
+- Block
+  - 줄바꿈 되어 새 줄에 표시됨
+  - 너비가 가능한 전체가 채워짐
+  - Text, 블럭요소, 인라인요소 모두 포함할 수 있음
+
+- Inline
+  - 줄바꿈 되지 않고 한 줄에 표시됨
+  - 너비가 콘텐츠/ 자식요소에 맞춰짐
+  - Text, 인라인요소 포함할 수 있음(블럭요소는 포함할 수 없음 - 예외 : a태그)
+
+- div(dibision)
+  - 단순히 영역을 구분하거나 그룹핑을 하는 컨테이너 요소
+  - 블럭요소
+
+- span
+  - 단순히 영역을 구분하거나 그룹핑을 하는 컨테이너 요소
+  - 인라인요소
+
+## HTML class, id
+- 해당 요쇼에 이름(식별자/identifier) 지정
+
+```
+<p class="클래스이름">...</p>
+<p id="아이디이름">...</p>
+<p>...</p>
+```
+- 클래스(class)
+  - 하나의 웹문서내에서 동일한 이름을 사용할 수 있음
+  - 하나의 요소에 여러 개의 이름을 사용할 수 있음
+
+- 아이디(id)
+  - 하나의 웹문서내에서 동일한 이름을 사용할 수 없음
+  - 하나의 요소에 여러 개의 이름을 사용할 수 없음
+
+```
+<div class="text import">text</div>
+<div class="text">text</div>
+
+<div id="title">title1</div>
+<div id="title">title2</div> => (x)
+
+<div id="title import">title3</div> => (x)
+```
+
+- naming 표기법
+  - 네이밍 할 때 영어 한개 단어로만 네이밍을 하기 힘들기 때문에 여러 단어를 연결해서 네이밍을 함
+  - 연결되는 단어를 구분할 수 있도록 표기
+
+```
+hello html world : 일반 표기
+
+네이밍
+hello_html_world : snake case (파일명, 폴더명)
+hello-html-world : kebab case (URL-폴더, class/id 이름)
+helloHtmlWorld : camel case (js - 변수/함수 이름)
+HelloHtmlWorld : pascal case (js - class 이름)
+```
+
+# CSS
+
+## CSS Introduction / Syntax
+- Cascading Style Sheet
+- 여러 개의 html 파일에 공통 적용
+
+```
+Selcetor(선택자){
+  CSS property:value;
+  CSS property:value;
+  CSS property:value;
+}
+```
+
+## CSS Selector
+- simple selector
+  - tag
+  - class
+  - id
+
+```
+tag 선택자
+h1 {
+  color:red;
+}
+
+class 선택자
+.class-name{
+  color:blue;
+}
+
+id 선택자
+#id-name{
+  color:green;
+}
+```
+
+## Cascading(캐스캐이딩) 규칙
+- 동일한 대상에 동일한 CSS property가 여러번 적용될 때 앞에서 적용된 스타일 위에 나중에 적용된 스타일이 덮어 쓰기됨
+- 제일 나중에 적용된 스타일로 최종 반영됨
+- 우선 순위
+  - id : 100
+  - class : 10
+  - tag : 1

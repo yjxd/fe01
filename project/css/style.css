@@ -1,0 +1,16 @@
+/* 사용 폰트
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+*/
+.gnb-list{
+  list-style-type: none;
+}
+.gnb-list-item{
+  display: inline-block;
+}
+.section-heading{
+  font-family: 'Montserrat', sans-serif;
+}
+.section-paragraph{
+  font-family: 'Nunito Sans', sans-serif;
+}

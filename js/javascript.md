@@ -20,6 +20,21 @@
   - ES5
   - ES6
 
+## Javascript 작성방식
+- External : 외부 파일
+- Internal : html 파일에 javascript 코드 블럭
+- Inline : Tag에 직접 작성
+```
+External
+<script src="example.js"></script>
+
+Internal
+<script>
+var a = 1;
+var b = 2;
+</script>
+```
+
 ## 데이터, 변수, 연산
 ### 데이터 타입
   - 문자
@@ -227,6 +242,11 @@ while(true){
 function 함수이름(){
   실행코드
 }
+
+const 변수(함수)이름 = function(){
+  실행코드
+}
+function(){} : 익명함수
 ```
 
 ## 배열, 객체, class
@@ -243,11 +263,151 @@ function 함수이름(){
 let car = ['Volvo', 'BMW', 'Saab'];
 
 // 추가
+car.push('Kia');
 // 출력
 console.log(car[0]);
 console.log(car[2]);
 // 수정
 car[1] = 'Benz';
 // 삭제
+car.pop();
+```
 
+###  객체
+- 여러가지 종류의 데이터 집합
+- 프로퍼티, 메소드로 구성
+
+### Class
+- 객체 데이터를 생성할 수 있게 하는 설계도
+```
+class Car{
+  constructor(){
+    this.name = 'Kia';
+    this.model = 'EV6';
+  }
+}
+let car1 = new Car();
+```
+
+## 추가 문법
+
+### 변수 스코프(범위)
+- 변수가 적용(인식)되는 범위
+- Block, Function 범위는 해당 범위에서만 적용(인지)가 가능
+- Global 범위는 전체범위에서 적용(인지)가 가능
+  - Block Scope
+  - Function Scope
+  - Global Scope
+- var
+  - Function, Global
+- let, const
+  - Block, Function, Global
+
+```
+let a = 1; // Global Scope
+
+if(a<5){
+  let b = 2; // Block Scope
+}
+
+function add(){
+  let c = 3; // Function Scope
+}
+```
+
+### Arrow Function
+```
+fnction arrow(){}
+
+let arrow = function(){}
+
+let arrow = () => {}
+```
+
+## HTML DOM
+
+### DOM
+- Document object Model
+- 동적(Dynamic)
+  - 실제 HTML, CSS에는 없지만 js에서 렌더링되는 시점에 실행되어 적용되는 것
+- 정적(Static)
+  - HTML, CSS에서 실제로 코딩한 것이 반영
+
+### DOM Properties & Methods
+
+#### Find/Acess DOM
+- HTML4
+```
+document.getElementsByTagname()
+document.getElementById()
+document.getElementsByClassName()
+```
+- HTML5
+```
+document.querySelector()
+document.querSelectorAll()
+```
+
+#### DOM(HTML) Create/Read/Update/Delete
+- Create
+```
+document.createElement()
+document.appendChild()
+```
+- Read
+- Update
+```
+document.innerHTML
+```
+- Delete
+```
+document.removeChild()
+```
+
+### HTML Event
+- 웹페이지/웹서비스에서 특정 상태의 변화
+- 이벤트 발생 -> 이벤트 감지 -> 해당 이벤트에 대해 알맞은 기능 실행
+- 웹페이지 상태 변화 : 이벤트
+- 이벤트를 감지하는 것 : 이벤트 리스닝/핸들링
+```
+이벤트 리스너
+element.addEventListener('이벤트', 함수)
+
+function myFunction(){}
+button.addEventListener('click', myFunction);
+
+button.addEventListener('click', function(){});
+```
+
+### HTML Forms
+- input
+  - empty element
+```
+<input type="text">
+<input type="password">
+
+<input type="button">
+<input type="submit">
+<input type="reset">
+
+<input type="radio">
+<input type="checkbox">
+
+<input type="file">
+```
+
+- select
+```
+<select>
+  <option>목록1</option>
+  <option>목록2</option>
+  <option>목록3</option>
+</select>
+```
+
+- button
+```
+<button type="button"></button>
+<button type="submit"></button>
+<button type="reset"></button>
 ```

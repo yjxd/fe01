@@ -557,6 +557,39 @@ div{
     - stretch(default) : 세로 길이가 부모요소에 맞춰서 채워짐
       (* flex 적용된 박스의 가로길이는 자식요소에 맞춰짐)
 
+#### Position
+- 박스의 위치를 좌표를 사용해서 개별로 위치 설정
+
+- Position 속성
+  - static : default 값 - 좌표 배치 할 수 없음
+  - relative : 상대적 좌표 배치 - 원래 위치, 영역 유지를 함, 원래 위치가 기준
+  - absolute : 절대적 좌표 배치 - 원래 위치, 영역 유지를 하지 않음,  부모요소가 기준
+  - fixed : 고정 좌표 배치 - 원래 위치, 영역 유지를 하지 않음, 브라우저를 기준, 웹 문서와 독립
+  - absolute로 설정된 박스가 부모요소를 기준으로 좌표배치가 되도록 하려면, 부모요소에 position 속성이 설정되어 있어야 함
+  - 부모요소에 position 속성이 설정되어 있지 않을때
+    - position 속성이 설정되어 있는 조상요소를 기준
+    - 조상요소 모두 position 속성이 설정되어 있지 않으면 body가 기준
+  - absolute, fixed 설정시 박스의 width 속성은 자식요소에 맞춰짐
+
+- 좌표 설정
+  - top, right, bottom, left : 속성
+  - 각각의 속성을 사용하면 해당 위치가 기준이 됨
+  - top : 상단 기준 - 상단에서 ~ 떨어진 위치
+  - right : 우측 기준
+  - bottom : 하단 기준
+  - left : 좌측 기준
+
+- 좌표 축 방향
+   - 가로 방향 : 왼쪽 -> 오른쪽
+   - 세로 방향 : 상단 -> 하단
+```
+div{
+  position : relative;
+  top : 30px;
+  left : 50px;
+}
+```
+
 ## 상속(inherit)
 - 부모 요소에 적용된 css style이 자식요소에도 적용되는 현상
 

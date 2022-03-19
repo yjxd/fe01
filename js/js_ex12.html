@@ -132,6 +132,8 @@
     // Create - Add
     const buttonCreate = document.querySelector('.btn-create');
 
+    let lastIndex = document.querySelectorAll('.car-item').length + 1;
+
     buttonCreate.addEventListener('click', function(){
       // li 생성
       let listItem = document.createElement('li');
@@ -139,13 +141,19 @@
       // span 생성
       let listItemNumber = document.createElement('span');
       // 인덱스 번호 생성
-      let newIndexNumber = document.querySelectorAll('.car-item').length + 1;
+
+      // 번호 재배열한 경우
+      //let newIndexNumber = document.querySelectorAll('.car-item').length + 1;
+      
+      // 최초 할당된 번호를 유지하는 경우      
+      let newIndexNumber = lastIndex;
+
       // 인덱스 번호 가공
       let number = document.createTextNode(newIndexNumber);
       // span 태그에 숫자값을 자식요소로 추가
       listItemNumber.appendChild(number);
       // span 태그에 class 추가
-      listItemNumber.classList.add('.car-number');
+      listItemNumber.classList.add('car-number');
 
       // span 생성
       let listItemName = document.createElement('span');
@@ -156,17 +164,20 @@
       // span 태그에 목록 내용을 자식요소로 추가
       listItemName.appendChild(text);
       // span 태그에 class 이름 추가
-      listItemName.classList.add('.car-name');
+      listItemName.classList.add('car-name');
 
       // li 태그에 span 태그 2세트를 자식요소로 추가
       listItem.appendChild(listItemNumber);
       listItem.appendChild(listItemName);
       // li 태그에 class 추가
-      listItem.classList.add('.car-item');
+      listItem.classList.add('car-item');
 
       // ul 태그에 li태그를 자식요소로 추가
       let list = document.querySelector('.car-list');
       list.appendChild(listItem);
+      
+      // 아이템을 추가한 이후 lastIndex update
+      lastIndex++;
     });
 
     // Read
@@ -210,8 +221,13 @@
       let listItem = document.querySelectorAll('.car-item');
       // 부모요소를 기준으로 자식요소 삭제
       list.removeChild(listItem[indexNumber]);
-    });
 
+      // 번호 재배열
+      //let listItem2 = document.querySelectorAll('.car-item');
+      //for(let i=0; i < listItem2.length; i++){
+        //listItem2[i].querySelector('.car-number').innerHTML = i+1;
+      //}
+    });
 
   </script>
 </body>

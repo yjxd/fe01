@@ -92,6 +92,7 @@ font-family: 'Nunito Sans', sans-serif;
   height: 320px;
   background: #f6f6f6;
   position: relative;
+  overflow: hidden;
 }
 .slide{
   width: 100%;
@@ -102,17 +103,19 @@ font-family: 'Nunito Sans', sans-serif;
 }
 .slide.prev{
   left: -100%;
+  transition: left 2s;
 }
 .slide.current{
   left: 0;
+  transition: left 2s;
 }
 .slide.next{
   left: 100%;
 }
-.play{
+/*.play{
   display: block;
   margin: 0 auto;
-}
+}*/
 .section-heading{
   font-family: 'Montserrat', sans-serif;
   font-size: 38px;
@@ -142,10 +145,15 @@ font-family: 'Nunito Sans', sans-serif;
   width: 340px;
   height: 300px;
   overflow: hidden;
+  position:relative;
 }
 .visual{
   display: block;
   height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* translate %는 자기자신이 기준이 됨 */
 }
 .footer{
   height: 280px;
@@ -165,6 +173,89 @@ font-family: 'Nunito Sans', sans-serif;
   color: #bcbcbc;
 }
 
+/* about page */
+.about-section1{
+  background: url(/project/resource/bg_about.jpg) no-repeat center;
+  height: 320px;
+  padding-top: 105px;
+  color: #fff;
+  background-size: cover; /* contain:영역의 짧은 쪽 기준으로 잘리지 않게 맞춰주기
+  cover : 영역의 긴쪽을 기준으로 전체를 커버해줌 */
+}
+.about-section1 .section-paragraph{
+  color: #fff;
+}
+.about-section2{
+  height: 280px;
+  background: #10c9c3;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section2 .icon-wrap{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.about-section2 .icon-item{
+  padding-left: 50px;
+}
+
+/* 가상클래스 - Pseudo class */
+/* 상태, 순서로 선택 */
+/* 
+ :link, :hover, :visited, :active - 상태표현
+ :first-child, :last-child, :nth-child - 순서표현
+*/
+.about-section2 .icon-item:nth-child(1){
+  background: url(/project/resource/icon_01.png) no-repeat 0 center;
+}
+.about-section2 .icon-item:nth-child(2){
+  background: url(/project/resource/icon_02.png) no-repeat 0 center;
+}
+.about-section2 .icon-item:nth-child(3){
+  background: url(/project/resource/icon_03.png) no-repeat 0 center;
+}
+.about-section2 .icon-item:nth-child(4){
+  background: url(/project/resource/icon_04.png) no-repeat 0 center;
+}
+.about-section2 .icon-number{
+  margin-bottom: 5px;
+}
+.about-section3{
+  height: 596px;
+  background:#f7f7f7 url(/project/resource/bg_frame.jpg) no-repeat 0 0;
+  position: relative;
+}
+.about-section3 .text-wrap{
+  width: 500px;
+  position: absolute;
+  top: 105px;
+  right: 200px;
+}
+.about-section3 .section-heading,
+.about-section3 .section-paragraph{
+  text-align: left;
+  margin-bottom: 30px;
+}
+.about-section4{
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+.about-section4 .section-heading,
+.about-section4 .section-paragraph{
+  margin-bottom: 30px;
+}
+.section-button{
+  width: 120px;
+  height: 50px;
+  background: #10c9c3;
+  color: #fff;
+  border: 0;/* =none */
+  display: block;
+  margin: 0 auto;
+}
 /* tablet */
 /* @media screen and (max-width:1024px) */
 @media screen and (max-width:1360px){
@@ -190,10 +281,15 @@ font-family: 'Nunito Sans', sans-serif;
     top: 50px;
     left: 0;
     width: 100%;
-    display: none;
+    height: 0;
+    /* display: none; */
+    z-index: 90;/* 박스 포개질때 포개지는 순서 조정, 숫자 큰 박스가 앞으로 나옴*/
+    overflow: hidden;
+    transition: height 0.5s;
   }
   .gnb.active{
-    display: block;
+    /* display: block; */
+    height: 186px;
   }
   .gnb-list{
     display: block; /* flex 적용 해제 */
@@ -252,6 +348,15 @@ font-family: 'Nunito Sans', sans-serif;
   .footer{
     display: block;
     padding: 20px;
+  }
+  /* about page */
+  .about-section2 .icon-wrap{
+    display: block;
+  }
+  .about-section3 .text-wrap{
+    width: auto;
+    position: static; /* 포지션을 사용 안할때는 기존 포지션으로 기본값으로 변경해줌*/
+    padding: 100px 30px 0;
   }
 }
 @media screen and (max-width:380px){

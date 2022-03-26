@@ -9,61 +9,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link href="/project/css/style.css" rel="stylesheet">
+  <script src="/project/js/function.js" defer></script>
 </head>
 <body>
   <header class="header">
     <h1 class="logo"><a href="home.html"><img src="/project/resource/logo.png" alt="Piroll logo" class="logo-image"></a></h1>
     <nav class="gnb">
       <ul class="gnb-list">
-        <li class="gnb-list-item"><a href="" class="gnb-list-link">HOME</a></li>
-        <li class="gnb-list-item"><a href="" class="gnb-list-link">ABOUT</a></li>
-        <li class="gnb-list-item"><a href="" class="gnb-list-link">CONTACT</a></li>
+        <li class="gnb-list-item"><a href="/project/html/home.html" class="gnb-list-link">HOME</a></li>
+        <li class="gnb-list-item"><a href="/project/html/about.html" class="gnb-list-link">ABOUT</a></li>
+        <li class="gnb-list-item"><a href="/project/html/contact.html" class="gnb-list-link">CONTACT</a></li>
       </ul>
     </nav>
+    <button type="button" class="hamburger-menu">
+      <img src="/project/resource/hamburger-menu.svg " alt="mobile menu">
+    </button>
   </header>
-  <section style="background:rgba(20,20,20,0.6)">
-    <h2>Amelia Woods</h2>
-    <p>
+  <section class="about-section1">
+    <h2 class="section-heading">Amelia Woods</h2>
+    <p class="section-paragraph">
       I am a Graphic & Web Designer based in New York, specializing in User Interface Design and Development.
     </p>
   </section>
-  <section style="background:#10c9c3;">
-    <dl>
-      <dt>548</dt>
-      <dd>PROJECTS COMPLETED</dd>
-    </dl>
-    <dl>
-      <dt>1465</dt>
-      <dd>WORKING HOURS</dd>
-    </dl>
-    <dl>
-      <dt>612</dt>
-      <dd>POSITIVE FEEDBACKS</dd>
-    </dl>
-    <dl>
-      <dt>735</dt>
-      <dd>HAPPY CLIENTS</dd>
-    </dl>
+  <section class="about-section2">
+     <div class="icon-wrap"> 
+      <dl class="icon-item">
+        <dt class="icon-number">548</dt>
+        <dd class="icon-text">PROJECTS COMPLETED</dd>
+      </dl>
+      <dl class="icon-item">
+        <dt class="icon-number">1465</dt>
+        <dd class="icon-text">WORKING HOURS</dd>
+      </dl>
+      <dl class="icon-item">
+        <dt class="icon-number">612</dt>
+        <dd class="icon-text">POSITIVE FEEDBACKS</dd>
+      </dl>
+      <dl class="icon-item">
+        <dt class="icon-number">735</dt>
+        <dd class="icon-text">HAPPY CLIENTS</dd>
+      </dl>
+     </div>
   </section>
-  <section style="background:#f5f5f5;">
-    <h2>About me</h2>
-    <p>
-      Given Let waters air sea had you`ll, may seed abundantly fish.
-      Were, you`ll earth forth winged above brought. Own darkness
-      they`re him can`t fourth sea place have.
-    </p>
-    <p>
-      So the above May stars cattle fruitful face shall. Tree it, winged.
-      Every signs male firmament us. Morning him.
-    </p>
-    <img src="../image/sign.png" alt="서명">
+  <section class="about-section3">
+    <div class="text-wrap">
+      <h2 class="section-heading">About me</h2>
+      <p class="section-paragraph">
+        Given Let waters air sea had you`ll, may seed abundantly fish.
+        Were, you`ll earth forth winged above brought. Own darkness
+        they`re him can`t fourth sea place have.
+      </p>
+      <p class="section-paragraph">
+        So the above May stars cattle fruitful face shall. Tree it, winged.
+        Every signs male firmament us. Morning him.
+      </p>
+      <img src="../image/sign.png" alt="서명">
+    </div>
   </section>
-  <section>
-    <h2>Need a Project?</h2>
-    <p>
-      Let us know what you`re looking for in an agency. We`ll take a look and see if this could be the start of something beautiful.
+  <section class="about-section4">
+    <h2 class="section-heading">Need a Project?</h2>
+    <p class="section-paragraph">
+      Let us know what you`re looking for in an agency. We`ll take a look and see <br>
+      if this could be the start of something beautiful.
     </p>
-    <button type="button" style="background:#10c9c3;">LET`S TALK</button>
+    <button type="button" class="section-button">LET`S TALK</button>
   </section>
   <footer class="footer">
     <article class="group">

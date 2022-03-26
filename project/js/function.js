@@ -34,29 +34,57 @@ for(let i = 0; i < tabMenu.length; i++){
 }
 
 // carousel
-const play = document.querySelector('.play');
+// const play = document.querySelector('.play');
 const slide = document.querySelectorAll('.slide');
 
-let current = 0;
-let next = 1;
-let prev = 2;
+if(slide.length !== 0 ){
 
-play.addEventListener('click', function(){
+  let current = 0;
+  let next = 1;
+  let prev = 2;
+  
+  // play.addEventListener('click', function(){
+  
+  //   if(next >= slide.length){
+  //     next = 0;
+  //   }
+  
+  //   slide[current].classList.remove('current', 'next');
+  //   slide[current].classList.add('prev');
+  
+  //   slide[next].classList.remove('prev', 'next');
+  //   slide[next].classList.add('current');
+  
+  //   slide[prev].classList.remove('current', 'prev');
+  //   slide[prev].classList.add('next');
+  
+  //   prev = current;
+  //   current = next;
+  //   next++;
+  // });
+  
+  /**
+   * window.setInterval(함수, 시간) : 일정시간에 한번씩 반복 실행 메소드
+   * => window 객체는 생략 가능
+   * 시간 : ms단위 => 1초 
+   */
+  
+  window.setInterval(function(){
+    if(next >= slide.length){
+      next = 0;
+    }
+    slide[current].classList.remove('current', 'next');
+    slide[current].classList.add('prev');
+    
+    slide[next].classList.remove('prev', 'next');
+    slide[next].classList.add('current');
+    
+    slide[prev].classList.remove('current', 'prev');
+    slide[prev].classList.add('next');
+  
+    prev = current;
+    current = next;
+    next++;
+  }, 5000);
 
-  if(next >= slide.length){
-    next = 0;
-  }
-
-  slide[current].classList.remove('current', 'next');
-  slide[current].classList.add('prev');
-
-  slide[next].classList.remove('prev', 'next');
-  slide[next].classList.add('current');
-
-  slide[prev].classList.remove('current', 'prev');
-  slide[prev].classList.add('next');
-
-  prev = current;
-  current = next;
-  next++;
-});
+}

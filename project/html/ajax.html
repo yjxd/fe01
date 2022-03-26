@@ -11,15 +11,16 @@
   <link href="/project/css/style.css" rel="stylesheet">
   <script src="/project/js/function.js" defer></script>
   <!--defer : html파일을 불러온 후 스크립트를 실행하라 = body태그 젤 끝에 쓰는것과 같은 의미-->
+  <script src="/project/js/ajax.js"></script>
 </head>
 <body>
   <header class="header">
     <h1 class="logo"><a href="home.html"><img src="/project/resource/logo.png" alt="Piroll logo" class="logo-image"></a></h1>
     <nav class="gnb">
       <ul class="gnb-list">
-        <li class="gnb-list-item"><a href="/project/html/home.html" class="gnb-list-link">HOME</a></li>
-        <li class="gnb-list-item"><a href="/project/html/about.html" class="gnb-list-link">ABOUT</a></li>
-        <li class="gnb-list-item"><a href="/project/html/contact.html" class="gnb-list-link">CONTACT</a></li>
+        <li class="gnb-list-item"><a href="#" class="gnb-list-link">HOME</a></li> <!-- # : 페이지의 맨위로 이동-->
+        <li class="gnb-list-item"><a href="#" class="gnb-list-link">ABOUT</a></li>
+        <li class="gnb-list-item"><a href="#" class="gnb-list-link">CONTACT</a></li>
       </ul>
     </nav>
     <button type="button" class="hamburger-menu">
@@ -48,63 +49,7 @@
       </p>
     </div>
   </section>
-  <!--<button type="button" class="play">play</button>-->
-  <section class="section2">
-    <ul class="tab-menu">
-      <li class="tab-menu-item active">
-        <button type="button" class="tab-button">Group 1</button>
-      </li>
-      <li class="tab-menu-item">
-        <button type="button" class="tab-button">Group 2</button>
-      </li>
-      <li class="tab-menu-item">
-        <button type="button" class="tab-button">Group 3</button>
-      </li>
-    </ul>
-    <article class="group active">
-      <figure class="visual-wrap">
-        <img src="/project/resource/image_01.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-        <img src="/project/resource/image_02.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-        <img src="/project/resource/image_03.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-        <video controls autoplay muted loop class="visual">
-          <source src="/html_css/mov_bbb.mp4" type="video/mp4">
-        </video>
-      </figure>
-    </article>
-    <article class="group">
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_04.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-        <iframe class="visual" width="560" height="315" src="https://www.youtube.com/embed/AbZH7XWDW_k?controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </figure>
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_05.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_06.jpg" alt="" class="visual">
-      </figure>
-    </article>
-    <article class="group">
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_07.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_08.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_09.jpg" alt="" class="visual">
-      </figure>
-      <figure class="visual-wrap">
-      <img src="/project/resource/image_10.jpg" alt="" class="visual">
-      </figure>
-    </article>  
+  <section class="ajax">
   </section>
   <footer class="footer">
     <article class="group">

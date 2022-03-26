@@ -66,7 +66,7 @@ if(slide.length !== 0 ){
   /**
    * window.setInterval(함수, 시간) : 일정시간에 한번씩 반복 실행 메소드
    * => window 객체는 생략 가능
-   * 시간 : ms단위 => 1초 
+   * 시간 : ms단위 => 1초 = 1000ms 
    */
   
   window.setInterval(function(){
